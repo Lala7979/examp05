@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>조별과제</title>
+</head>
+<body>
+
+</body>
+
+<script>
+	var inner=prompt("출력할 구구단의 단을 입력하세요 (예제3,4)","3,4")
+	var innerArr=[];
+	var A=inner.indexOf(',')
+	if(A<=-1)
+		console.log("진입")
+		innerArr[0]=inner;innerArr[1]=inner;
+	else{
+		innerArr=inner.split(",")	
+	}
+	
+	var page=document.getElementsByTagName('body')[0];
+	var contents="";
+	console.log(contents)
+	for(var i=parseInt(innerArr[0]);i<=parseInt(innerArr[1]);i++){
+		var outline="";
+			for(var j=1;j<=9;j++){
+				outline+=i+"*"+j+"="+(i*j)+"<br>";
+			}
+			contents+=
+				"<div style='text-align:right;float:left;border:1px solid black'>"+outline+"</div>"
+				
+	}
+	console.log(contents);
+	body.innerHTML=contents;
+	
+
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function outer(){
+		var cnt=0;
+		var pid=setInterval(function(){
+			cnt++;
+			document.write(cnt);
+		},1000);
+
+		if(cnt>=10){
+			clearInterval(pid);
+		}
+	}
+	outer();
+	var add=new Function("a","b","return a+b");
+	function add(a,b){
+		return a+b;
+	}
+</script>
+</head>
+<body>
+	
+</body>
+</html>
